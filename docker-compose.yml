@@ -16,8 +16,6 @@ services:
     build: ./config
     volumes:
       - ./html/:/var/www/html/
-      - ./config/info.php:/var/www/html/info.php
-      - ./config/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
       - ./logs/:/var/log/apache2/
     ports:
       - 80:80

@@ -1,6 +1,6 @@
-# Use WordPress image
 FROM wordpress
 
-# Install and enable xdebug
-RUN yes | pecl install xdebug && \
-  docker-php-ext-enable xdebug
+RUN yes | pecl install xdebug && docker-php-ext-enable xdebug
+
+COPY info.php /var/www/html/info.php
+COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
