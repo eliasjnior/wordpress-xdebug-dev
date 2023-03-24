@@ -1,4 +1,4 @@
-FROM wordpress
+FROM arm64v8/wordpress
 
 RUN yes | pecl install xdebug && docker-php-ext-enable xdebug
 
