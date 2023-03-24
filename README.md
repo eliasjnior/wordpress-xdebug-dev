@@ -15,3 +15,12 @@ The application will be ready and you can setup your WordPress installation. You
 ## Debugging
 
 The config file is already setup for VSCode, so it's just "Listen for Xdebug" in debug tab.
+
+## Publishing new version
+
+```
+docker build -t {local_build_name} ./config
+docker tag {local_build_name} eliasjnior/wordpress-xdebug:{version}
+docker push eliasjnior/wordpress-xdebug:{version}
+```
+
